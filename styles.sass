@@ -1,0 +1,729 @@
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap')
+@import url('http://weloveiconfonts.com/api/?family=entypo')
+
+$container_width: 1170px
+$accent_color: #f10e1f
+
+$information-phone: "screen and (max-width : 480px)"
+
+@font-face
+  font-family: "Montserrat-Regular"
+  src: url("fonts/Montserrat/Montserrat-Regular.ttf") format("truetype")
+
+@font-face
+  font-family: "Montserrat-Black"
+  src: url("fonts/Montserrat/Montserrat-Black.ttf") format("truetype")
+
+@font-face
+  font-family: "Montserrat-Medium"
+  src: url("fonts/Montserrat/Montserrat-Medium.ttf") format("truetype")
+
+@font-face
+  font-family: "Montserrat-Light"
+  src: url("fonts/Montserrat/Montserrat-Light.ttf") format("truetype")
+
+@font-face
+  font-family: "Montserrat-SemiBold"
+  src: url("fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype")
+
+.fontAwesome
+  font-family: 'Helvetica', FontAwesome, sans-serif
+
+body
+  background-color: #020d18
+  @media #{$information-phone}
+    max-width: 411px
+    overflow-x: auto
+
+.container
+  margin: 0 auto
+  width: $container_width
+
+  @media #{$information-phone}
+    width: 411px
+
+  //background-color: lightblue
+
+
+//START FIRST LAYOUT
+
+#first_layout
+  height: 933px
+  background-image: url("images/background.png")
+  background-repeat: no-repeat
+  background-size: cover
+  padding-bottom: 30px
+
+//.alt_meniu, .toggle-nav
+//  display: none
+//  &:after, &:before
+//    display: block
+//  @media #{$information-phone}
+//    display: inline-block
+//    color: $accent_color
+//    font-size: 25px
+//    width: 40px
+//    height: 40px
+//    text-align: center
+//    background-color: rgba(75,75,75,0.71)
+//    margin: 0
+//    padding: 0
+//    position: fixed
+//
+//.alt_meniu
+//  display: none
+
+#hamnav label, #hamburger, #hamitems
+  display: none
+
+
+
+#hamitems a
+  //width: 20%
+  //padding: 10px
+  color: white
+  text-decoration: none
+  text-align: center
+  &:hover
+    background-color: #401408
+
+
+@media #{$information-phone}
+  #hamnav
+    background-color: #000b15
+
+  #hamnav label
+    display: inline-block
+    position: fixed
+    color: white
+    background-color: $accent_color
+    //background-color: #ff0472
+    font-style: normal
+    font-size: 1.2em
+    padding: 10px
+    margin-bottom: 100px
+
+  #hamitems
+    display: grid
+    grid-template-columns: auto
+    place-items: center center
+    align-content: center
+    li
+      margin-top: 2px
+      height: 50px
+      a
+        box-sizing: border-box
+        place-self: center
+        display: block
+        position: fixed
+        background-color: #15202b
+        color: #ff0472
+        font-weight: bold
+        font-family: Montserrat-Regular
+        width: 100%
+        height: 50px
+        //padding: 2px
+        padding-top: 15px
+        vertical-align: middle
+        border-top: 1px solid rgba(255,0,4,0.27)
+        &:hover
+          //color: red
+
+  #hamitems
+    display: none
+
+  #hamnav input:checked ~ #hamitems
+    display: block
+    //position: fixed
+
+#header_list
+  list-style: none
+  display: flex
+  width: 100%
+  margin-left: 0
+  padding-left: 0
+  height: 42px
+  align-items: center
+  font-size: 14px
+  padding-top: 15px
+
+  @media #{$information-phone}
+    grid-template-columns: repeat(4,auto)
+    justify-content: center
+    display: none
+    li
+      margin: 0
+      padding: 0
+    li:nth-child(1)
+      width: 20px
+      img
+        margin-left: 30px
+    li:nth-child(3)
+      margin: 0
+    li:nth-child(5)
+      background-color: greenyellow
+
+  li
+    padding-left: 35px
+    @media #{$information-phone}
+      padding-left: 20px
+
+    font-family: Montserrat-Light
+    a
+      height: 100%
+      vertical-align: middle
+      color: white
+      text-decoration: none
+      &:hover
+        color: $accent_color
+
+  li:nth-child(1)
+    padding-left: 0
+
+
+  li:nth-child(2)
+    padding-left: 5px
+    a
+      color: $accent_color
+
+
+  li:nth-child(3)
+    padding-left: 130px
+    @media #{$information-phone}
+      padding-left: 0px
+
+
+  li:nth-child(8)
+    #search
+      margin-left: 125px
+      color: $accent_color
+      background-color: rgba(255,255,255,0)
+      border-width: 0 0 2px
+      border-color: $accent_color
+      outline: 0
+      @media #{$information-phone}
+        margin-left: 0
+      &::placeholder
+        color: $accent_color
+
+  li:nth-child(9)
+    font-family: Montserrat-Regular
+    font-size: 14px
+
+  li:nth-child(10)
+    button
+      background-color: $accent_color
+      border-radius: 50px
+      padding: 10px 20px
+      color: white
+      border: 0
+      font-family: Montserrat-Regular
+      font-size: 14px
+      &:hover
+        cursor: pointer
+        opacity: 75%
+
+
+.premiera_film
+  height: 600px
+  width: 100%
+  display: grid
+  grid-template-columns: auto auto
+  align-items: center
+
+  @media #{$information-phone}
+    grid-template-columns: auto
+    height: 100%
+    //margin-top: 80px
+    justify-content: center
+
+    div:nth-of-type(1)
+      text-align: center
+
+    div:nth-of-type(2)
+      text-align: center
+      grid-row-start: 1
+      grid-row-end: 2
+
+
+  .premiera_dreapta
+    text-align: right
+
+  .premiera_film_stanga
+    color: white
+
+    .categorii //Categorii
+      display: inline-grid
+      grid-template-columns: auto auto auto
+      color: white
+      font-family: Montserrat-Light, "Calibri Light"
+      font-size: 19
+      div
+        border-radius: 3px
+        padding: 2px 10px
+        margin-right: 10px
+
+      div:nth-child(1)
+        background-color: rgb(244, 176, 30)
+      div:nth-child(2)
+        background-color: rgb(55, 163, 223)
+      div:nth-child(3)
+        background-color: rgb(223, 95, 55)
+
+    .premiera_titlu
+      margin-top: 10px
+      span
+        font-size: 60pt
+        font-family: Montserrat-SemiBold, "Calibri Light"
+        @media #{$information-phone}
+          font-size: 40pt
+
+    .premiera_titlu_dreapta span
+      font-size: 36pt
+
+
+    .premiera_descriere
+      margin-top: 20px
+      span
+        color: rgb(176, 176, 176)
+        font-size: 14px
+        font-family: Montserrat-Light, "Calibri Light"
+        @media #{$information-phone}
+          font-size: 11px
+          text-align: center
+
+
+    .premiera_butoane
+      margin-top: 50px
+
+    .premiera_butoane div
+      display: inline
+      background-color: $accent_color
+      border-radius: 20px
+      padding: 10px
+      font-family: Montserrat-Light
+      &:hover
+        background-color: rgba(93,0,17,0.99)
+        cursor: pointer
+      &:nth-child(2)
+        background-color: #141414
+        &:hover
+          background-color: #656565
+          cursor: pointer
+
+
+    .play_button
+      font-family: FontAwesome
+
+
+#second_layout
+  background-image: url("images/background2.png")
+  background-repeat: no-repeat
+  background-position: right
+  background-size: cover
+  height: 550px
+  @media #{$information-phone}
+    height: 100%
+    margin-top: 1150px
+
+.font-awe
+  font-family: FontAwesome
+
+@media #{$information-phone}
+  #youtube_video
+    display: none
+
+#popular_serials
+  span
+    color: rgb(176, 176, 176)
+    font-family: Montserrat-Light
+    line-height: 5.786
+    font-size: 14px
+    @media #{$information-phone}
+      display: inline-block
+      width: 100%
+      text-align: center
+
+  ul
+    display: inline-grid
+    list-style-type: none
+    list-style-position: inside
+    grid-template-columns: repeat(7,auto)
+    grid-column-gap: 15px
+    margin: 0
+    padding: 0
+    width: 100%
+    align-items: center
+    justify-content: center
+    @media #{$information-phone}
+      display: grid
+      grid-template-columns: auto
+      grid-row-gap: 20px
+
+
+    li
+      text-align: center
+      //box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2)
+
+      img
+        outline: 100px solid rgba(0,0,0,0.4) !important
+        outline-offset: -100px
+        //position: relative
+
+    li:first-child, li:last-child
+      position: relative
+      width: 222px
+      height: 201px
+      display: flex
+      align-items: center
+      justify-content: center
+      opacity: 0.859
+      @media #{$information-phone}
+        display: none
+
+      &:first-child img:nth-child(2), &:last-child img:nth-child(1) //imaginile
+        height: 100px
+        width: 100px
+
+      &:first-child img:nth-child(1), &:last-child img:nth-child(2) //sagetile
+        margin: 50px
+
+
+      &:first-child
+        justify-content: flex-end
+      &:last-child
+        justify-content: flex-start
+
+
+.reclama
+  width: 100%
+  text-align: center
+  margin-top: 50px
+  &:hover
+    cursor: pointer
+  @media #{$information-phone}
+    display: none
+
+#trends
+  margin-top: 40px
+
+  #trends_now
+    font-family: Montserrat-Light
+    color: #b0b0b0
+    font-size: 14pt
+    @media #{$information-phone}
+      display: inline-block
+      width: 100%
+      text-align: center
+
+  div ul
+    width: 100%
+    list-style-type: none
+    list-style-position: inside
+    margin: 0
+    padding: 0
+    margin-top: 20px
+    display: inline-grid
+    grid-template-columns: repeat(10,auto)
+    column-gap: 10px
+    place-self: center center
+    color: white
+    @media #{$information-phone}
+      display: none
+
+    li
+      padding: 4px
+      padding-top: 10px
+      background-color: #15202b
+      text-align: center
+      border-radius: 20px
+      &:hover
+        background-color: $accent_color
+        cursor: pointer
+      span
+        font-family: Montserrat-Regular
+        font-size: 12pt
+        color: white
+      &:first-child
+        background-color: rgba(20,20,20,0)
+      &:last-child
+        background-color: rgba(20,20,20,0)
+
+
+
+
+//  LISTA DE FILME
+#lista_filme
+  margin-top: 50px
+  display: grid
+  grid-template-columns: auto auto auto auto auto
+  @media #{$information-phone}
+    grid-template-columns: auto
+    justify-content: center
+    width: 100%
+
+.un_film
+  height: 265px
+  width: 222px
+
+  & > img
+    outline: 100px solid rgba(0,0,0,0.4) !important
+    outline-offset: -100px
+
+
+
+
+.descriere_film,span
+  font-family: 'entypo', sans-serif
+
+.titlu_film
+  color: white
+
+.red_background
+  background-color: #d40f1f
+
+.elemente_film
+  color: #33373b
+  width: 100%
+  text-align: right
+  margin-top: 5px
+  div
+    display: inline-block
+    &:nth-child(1)
+      float: left
+      font-size: 14px
+      color: rgb(76, 76, 76)
+      line-height: 1.2
+      font-family: "Montserrat-Medium", serif
+      font-weight: bold
+
+    &:nth-child(2)
+      color: red
+      margin-right: 15px
+
+    &:nth-child(3)
+      margin-right: 15px
+
+    &:nth-child(4)
+      color: #f4dd1e
+
+.load_more
+  color: white
+  width: 100%
+  margin: 0 auto
+  text-align: center
+  margin-top: 50px
+
+  div
+    display: inline-block
+    margin: 0 auto
+    background-color: #15202b
+    padding: 20px
+    border-radius: 35px
+    &:hover
+      cursor: pointer
+      background-color: #33373b
+
+    &:nth-child(2)
+      font-family: Montserrat-Light
+      font-size: 12pt
+
+#despre_poster
+  margin-top: 80px
+  display: grid
+  grid-template-columns: repeat(4,auto)
+  place-items: center
+
+
+  div:nth-child(2)
+    color: white
+    width: 460px
+    margin-left: 25px
+    span
+      font-family: Montserrat-SemiBold
+      font-size: 36px
+    p
+      font-family: Montserrat-Light
+      font-size: 13px
+      color: #b0b0b0
+    a
+      font-family: Montserrat-Regular
+      font-size: 13px
+      text-decoration: none
+      color: white
+
+  div:nth-of-type(4)
+    ul
+      padding-left: 30px
+      li
+        display: inline-block
+        margin-left: 0px
+        width: 100%
+        padding-top: 50px
+        &:first-of-type
+          padding-top: 0px
+        img
+          float: left
+          padding-right: 20px
+        div
+          margin-left: 10px
+          padding-top: 5px
+          width: 120%
+          text-align: left
+
+          a
+            position: relative
+            color: white
+            font-family: Montserrat-Medium
+            font-size: 14pt
+            text-decoration: none
+
+          a:nth-of-type(2)
+              margin-top: 10px
+              display: inline-block
+              color: #4c4c4c
+              font-family: Montserrat-Light
+              font-size: 12pt
+
+  @media #{$information-phone} //#despre poster
+    grid-template-columns: auto
+    justify-content: center
+    place-self: center
+
+    div:nth-child(2)
+      padding: 0
+      width: 100%
+      margin: 0
+      text-align: center
+      span
+        font-size: 28px
+      p
+        font-size: 12px
+
+  div:nth-child(3)
+    @media #{$information-phone}
+     display: none
+
+#postere_film
+  display: grid
+  grid-template-columns: repeat(4,auto)
+  margin-top: 80px
+  @media #{$information-phone}
+    grid-template-columns: auto
+    justify-content: center
+    grid-row-gap: 30px
+  div
+    height: 401px
+    width: 263px
+    align-items: end
+    span
+      display: block
+      margin-top: 120%
+      padding-top: 10%
+      padding-bottom: 10%
+      bottom: 2px
+      background-color: rgba(0,0,0,0.71)
+
+      font-family: Montserrat-Medium
+      font-size: 14px
+      color: white
+
+
+
+  div:nth-child(1)
+    background-image: url("images/poster1.png")
+
+  div:nth-child(2)
+    background-image: url("images/poster2.png")
+
+  div:nth-child(3)
+    background-image: url("images/poster3.png")
+
+  div:nth-child(4)
+    background-image: url("images/poster4.png")
+
+  background-repeat: no-repeat
+
+.block
+  display: block
+
+#last_layout
+  background-color:  rgb(0, 11, 21)
+
+footer
+  margin-top: 55px
+  padding-top: 50px
+  padding-bottom: 50px
+  display: grid
+  grid-template-columns: repeat(6,auto)
+
+  div ul li a:hover
+    color: #a90004
+
+  @media #{$information-phone}
+    grid-template-columns: auto auto
+    grid-row-gap: 10px
+    justify-content: center
+    align-content: center
+    text-align: center
+    div:first-of-type
+      grid-column-start: 1
+      grid-column-end: 3
+    div:nth-of-type(4)
+      grid-column-start: 1
+      grid-column-end: 3
+    div:nth-of-type(5)
+      margin-top: 25px
+
+
+  div:first-of-type
+    p:first-of-type
+      font-family: Montserrat-Regular
+      font-size: 26px
+      color: #595959
+      vertical-align: center
+      display: inline-grid
+      grid-template-columns: auto auto
+      grid-column-gap: 20px
+    p:nth-of-type(2)
+      font-family: Montserrat-Light
+      font-size: 14px
+      //color: #b0b0b0
+      color: #909192
+
+    p:nth-of-type(3) // stele verzi
+      font-family: Montserrat-Light
+      font-size: 14px
+      color: #b0b0b0
+      margin-top: 80px
+      img
+        outline: 100px solid #fff !important
+        outline-offset: -100px
+
+    p:nth-of-type(5)
+      margin-top: 60px
+      display: inline-grid
+      grid-template-columns: repeat(4,auto)
+      align-items: center
+      a
+        margin-right: 10px
+
+
+
+  span
+    font-family: Montserrat-Medium
+    font-size: 14pt
+    color: #b0b0b0
+  ul
+    list-style-type: none
+    list-style-position: inside
+    margin: 0
+    padding: 0
+    li
+      margin-top: 20px
+      a
+        text-decoration: none
+        font-family: Montserrat-Light
+        font-size: 14px
+        color: #656565
